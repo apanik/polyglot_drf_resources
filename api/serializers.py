@@ -22,5 +22,3 @@ class SubscribeModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subscriber
         fields = ('id','name','age','email')
-
- 

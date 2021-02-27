@@ -1,6 +1,7 @@
 from django.urls import path,include
 from .views import subsciber,hello_world,SubscriberView,SubscriberView_2, SubscriberViewRetrive, \
-    SubscriberViewRetrive_2, SubscribeDestroyAPIView, SubscriberUpdateAPIView, RetrieveUpdateAPI
+    SubscriberViewRetrive_2, SubscribeDestroyAPIView, SubscriberUpdateAPIView, RetrieveUpdateAPI, \
+    login
 
 urlpatterns = [
     # Hello World API 
@@ -21,5 +22,7 @@ urlpatterns = [
     path('gen-sub-up/<int:id>',SubscriberUpdateAPIView.as_view(),name="gen-sub-up"),
     # Update and Delete with Generic
     path('gen-sub-ru/<int:id>',RetrieveUpdateAPI.as_view(),name="gen-sub-ru"),
+    # login api with token
+    path('login',login,name="login"),
 
 ]
